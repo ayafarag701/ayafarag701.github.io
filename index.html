@@ -473,16 +473,18 @@
 <section id="projects" class="py-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <!-- Section Header -->
-    <div class="flex items-center justify-between mb-8">
-      <h2 class="text-3xl md:text-4xl font-semibold">Projects</h2>
-      <div class="flex gap-3">
-        <button onclick="showProjects('uiux')"
-          class="px-4 py-2 rounded-2xl bg-pastelBlue/70 hover:bg-pastelBlue transition shadow-soft">
+    <!-- Section Header with Tabs -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-6">Projects</h2>
+      <div class="inline-flex rounded-2xl overflow-hidden border border-black/10 shadow-soft">
+        <button id="tab-uiux"
+          onclick="showProjects('uiux')"
+          class="px-6 py-2 bg-pastelBlue/70 text-black font-medium hover:bg-pastelBlue transition">
           UI/UX
         </button>
-        <button onclick="showProjects('flutter')"
-          class="px-4 py-2 rounded-2xl bg-pastelBlue/70 hover:bg-pastelBlue transition shadow-soft">
+        <button id="tab-flutter"
+          onclick="showProjects('flutter')"
+          class="px-6 py-2 bg-white text-black font-medium hover:bg-pastelBlue/50 transition">
           Flutter
         </button>
       </div>
@@ -490,42 +492,60 @@
 
     <!-- UI/UX Projects -->
     <div id="uiux-projects" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <article class="group bg-white rounded-2xl shadow-soft overflow-hidden border border-black/5">
+      <!-- Card 1 -->
+      <article
+        class="group bg-white rounded-2xl shadow-soft overflow-hidden border border-black/5 animate__animated animate__fadeInUp">
         <div class="aspect-[16/10] overflow-hidden">
-          <img class="w-full h-full object-cover" src="Cover.webp" alt="Moodoo App" />
+          <img class="w-full h-full object-cover group-hover:scale-105 transition" src="Cover.webp" alt="Moodoo App" />
         </div>
         <div class="p-5">
-          <h3 class="font-semibold">Moodoo – Discover Music</h3>
+          <h3 class="font-semibold">Moodoo – Discover Music, Discover Yourself</h3>
           <p class="mt-1 text-sm text-ink/70">
             A music app that adapts to your mood to help you discover songs that match your feelings.
           </p>
+          <a href="https://www.behance.net/gallery/231680245/Moodoo-Discover-Music-Discover-Yourself"
+            class="mt-3 inline-flex items-center gap-2 text-sm font-medium hover:underline">
+            View Details <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
       </article>
 
-      <article class="group bg-white rounded-2xl shadow-soft overflow-hidden border border-black/5">
+      <!-- Card 2 -->
+      <article
+        class="group bg-white rounded-2xl shadow-soft overflow-hidden border border-black/5 animate__animated animate__fadeInUp">
         <div class="aspect-[16/10] overflow-hidden">
-          <img class="w-full h-full object-cover" src="news.png" alt="NewsCloud App" />
+          <img class="w-full h-full object-cover group-hover:scale-105 transition" src="news.png" alt="NewsCloud App" />
         </div>
         <div class="p-5">
           <h3 class="font-semibold">NewsCloud App</h3>
           <p class="mt-1 text-sm text-ink/70">
             A news app that adapts to your interests to help you discover articles that match your curiosity.
           </p>
+          <a href="#"
+            class="mt-3 inline-flex items-center gap-2 text-sm font-medium hover:underline">
+            View Details <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
       </article>
     </div>
 
     <!-- Flutter Projects (Hidden by Default) -->
     <div id="flutter-projects" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 hidden">
-      <article class="group bg-white rounded-2xl shadow-soft overflow-hidden border border-black/5">
+      <!-- Card 1 -->
+      <article
+        class="group bg-white rounded-2xl shadow-soft overflow-hidden border border-black/5 animate__animated animate__fadeInUp">
         <div class="aspect-[16/10] overflow-hidden">
-          <img class="w-full h-full object-cover" src="flutter.png" alt="Flutter App" />
+          <img class="w-full h-full object-cover group-hover:scale-105 transition" src="flutter.png" alt="Flutter App" />
         </div>
         <div class="p-5">
           <h3 class="font-semibold">Task Manager App</h3>
           <p class="mt-1 text-sm text-ink/70">
             A Flutter app for managing daily tasks with reminders and a clean, modern UI.
           </p>
+          <a href="#"
+            class="mt-3 inline-flex items-center gap-2 text-sm font-medium hover:underline">
+            View Details <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
       </article>
     </div>
@@ -537,13 +557,23 @@
   function showProjects(type) {
     const uiux = document.getElementById('uiux-projects');
     const flutter = document.getElementById('flutter-projects');
+    const tabUiux = document.getElementById('tab-uiux');
+    const tabFlutter = document.getElementById('tab-flutter');
 
     if (type === 'uiux') {
       uiux.classList.remove('hidden');
       flutter.classList.add('hidden');
+      tabUiux.classList.add('bg-pastelBlue/70');
+      tabUiux.classList.remove('bg-white');
+      tabFlutter.classList.add('bg-white');
+      tabFlutter.classList.remove('bg-pastelBlue/70');
     } else {
       flutter.classList.remove('hidden');
       uiux.classList.add('hidden');
+      tabFlutter.classList.add('bg-pastelBlue/70');
+      tabFlutter.classList.remove('bg-white');
+      tabUiux.classList.add('bg-white');
+      tabUiux.classList.remove('bg-pastelBlue/70');
     }
   }
 </script>
