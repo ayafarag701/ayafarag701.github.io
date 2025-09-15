@@ -473,61 +473,90 @@
 <section id="projects" class="py-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <!-- Section Header with Buttons -->
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12">
+    <!-- Section Header -->
+    <div class="flex items-end justify-between gap-4 mb-8">
       <h2 class="text-3xl md:text-4xl font-semibold">Projects</h2>
       <div class="flex gap-3">
-        <a href="#uiux-projects"
-          class="px-4 py-2 rounded-2xl bg-pastelBlue/70 hover:bg-pastelBlue transition shadow-soft">
-          UI/UX
-        </a>
-        <a href="#flutter-projects"
-          class="px-4 py-2 rounded-2xl bg-pastelBlue/70 hover:bg-pastelBlue transition shadow-soft">
-          Flutter
-        </a>
+        <button class="swiper-button-prev px-4 py-2 rounded-2xl bg-pastelBlue/70 hover:bg-pastelBlue shadow-soft">
+          ⬅
+        </button>
+        <button class="swiper-button-next px-4 py-2 rounded-2xl bg-pastelBlue/70 hover:bg-pastelBlue shadow-soft">
+          ➡
+        </button>
       </div>
     </div>
 
-    <!-- UI/UX Projects -->
-    <div id="uiux-projects" class="mb-16 scroll-mt-20">
-      <h3 class="text-2xl font-semibold mb-6">UI/UX Projects</h3>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Example Project -->
-        <article class="group bg-white rounded-2xl shadow-soft overflow-hidden border border-black/5">
-          <div class="aspect-[16/10] overflow-hidden">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition" src="Cover.webp" alt="Moodoo App" />
-          </div>
-          <div class="p-5">
-            <h3 class="font-semibold">Moodoo – Discover Music, Discover Yourself</h3>
-            <p class="mt-1 text-sm text-ink/70">
-              A music app that adapts to your mood to help you discover songs that match your feelings.
-            </p>
-          </div>
-        </article>
+    <!-- Swiper Container -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <!-- Project 1 -->
+        <div class="swiper-slide">
+          <article class="group bg-white rounded-2xl shadow-soft overflow-hidden border border-black/5">
+            <div class="aspect-[16/10] overflow-hidden">
+              <img class="w-full h-full object-cover" src="Cover.webp" alt="Moodoo App" />
+            </div>
+            <div class="p-5">
+              <h3 class="font-semibold">Moodoo – Discover Music</h3>
+              <p class="mt-1 text-sm text-ink/70">
+                A music app that adapts to your mood to help you discover songs that match your feelings.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="swiper-slide">
+          <article class="group bg-white rounded-2xl shadow-soft overflow-hidden border border-black/5">
+            <div class="aspect-[16/10] overflow-hidden">
+              <img class="w-full h-full object-cover" src="news.png" alt="NewsCloud App" />
+            </div>
+            <div class="p-5">
+              <h3 class="font-semibold">NewsCloud App</h3>
+              <p class="mt-1 text-sm text-ink/70">
+                A news app that adapts to your interests to help you discover articles that match your curiosity.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Project 3 (Flutter Example) -->
+        <div class="swiper-slide">
+          <article class="group bg-white rounded-2xl shadow-soft overflow-hidden border border-black/5">
+            <div class="aspect-[16/10] overflow-hidden">
+              <img class="w-full h-full object-cover" src="flutter.png" alt="Flutter Project" />
+            </div>
+            <div class="p-5">
+              <h3 class="font-semibold">Task Manager App</h3>
+              <p class="mt-1 text-sm text-ink/70">
+                A Flutter app for managing daily tasks with reminders and a clean, modern UI.
+              </p>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
-
-    <!-- Flutter Projects -->
-    <div id="flutter-projects" class="scroll-mt-20">
-      <h3 class="text-2xl font-semibold mb-6">Flutter Projects</h3>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Example Flutter Project -->
-        <article class="group bg-white rounded-2xl shadow-soft overflow-hidden border border-black/5">
-          <div class="aspect-[16/10] overflow-hidden">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition" src="flutter.png" alt="Flutter Project" />
-          </div>
-          <div class="p-5">
-            <h3 class="font-semibold">Task Manager App</h3>
-            <p class="mt-1 text-sm text-ink/70">
-              A Flutter app for managing daily tasks with reminders and a clean, modern UI.
-            </p>
-          </div>
-        </article>
-      </div>
-    </div>
-
   </div>
 </section>
+
+<!-- SwiperJS Scripts -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      640: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
 
 
   <!-- Achievements -->
