@@ -472,22 +472,28 @@
 <!-- Projects -->
 <section id="projects" class="py-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Section Title -->
-    <div class="flex items-end justify-between gap-4 mb-8">
+
+    <!-- Section Header with Buttons -->
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12">
       <h2 class="text-3xl md:text-4xl font-semibold">Projects</h2>
-      <a href="#contact"
-        class="hidden sm:inline-flex px-4 py-2 rounded-2xl bg-pastelBlue/70 hover:bg-pastelBlue transition shadow-soft">
-        Work with me
-      </a>
+      <div class="flex gap-3">
+        <a href="#uiux-projects"
+          class="px-4 py-2 rounded-2xl bg-pastelBlue/70 hover:bg-pastelBlue transition shadow-soft">
+          UI/UX
+        </a>
+        <a href="#flutter-projects"
+          class="px-4 py-2 rounded-2xl bg-pastelBlue/70 hover:bg-pastelBlue transition shadow-soft">
+          Flutter
+        </a>
+      </div>
     </div>
 
     <!-- UI/UX Projects -->
-    <div class="mb-12">
+    <div id="uiux-projects" class="mb-16 scroll-mt-20">
       <h3 class="text-2xl font-semibold mb-6">UI/UX Projects</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Project Card 1 -->
-        <article
-          class="group bg-white rounded-2xl shadow-soft overflow-hidden border border-black/5 animate__animated animate__fadeInUp">
+        <!-- Example Project -->
+        <article class="group bg-white rounded-2xl shadow-soft overflow-hidden border border-black/5">
           <div class="aspect-[16/10] overflow-hidden">
             <img class="w-full h-full object-cover group-hover:scale-105 transition" src="Cover.webp" alt="Moodoo App" />
           </div>
@@ -496,40 +502,17 @@
             <p class="mt-1 text-sm text-ink/70">
               A music app that adapts to your mood to help you discover songs that match your feelings.
             </p>
-            <a href="https://www.behance.net/gallery/231680245/Moodoo-Discover-Music-Discover-Yourself"
-              class="mt-3 inline-flex items-center gap-2 text-sm font-medium hover:underline">
-              View Details <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </article>
-
-        <!-- Project Card 2 -->
-        <article
-          class="group bg-white rounded-2xl shadow-soft overflow-hidden border border-black/5 animate__animated animate__fadeInUp">
-          <div class="aspect-[16/10] overflow-hidden">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition" src="news.png" alt="News App" />
-          </div>
-          <div class="p-5">
-            <h3 class="font-semibold">NewsCloud App</h3>
-            <p class="mt-1 text-sm text-ink/70">
-              A news app that adapts to your interests to help you discover articles that match your curiosity.
-            </p>
-            <a href="https://www.behance.net/gallery/231680245/Moodoo-Discover-Music-Discover-Yourself"
-              class="mt-3 inline-flex items-center gap-2 text-sm font-medium hover:underline">
-              View Details <i class="fa-solid fa-arrow-right"></i>
-            </a>
           </div>
         </article>
       </div>
     </div>
 
     <!-- Flutter Projects -->
-    <div>
+    <div id="flutter-projects" class="scroll-mt-20">
       <h3 class="text-2xl font-semibold mb-6">Flutter Projects</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Flutter Project Example -->
-        <article
-          class="group bg-white rounded-2xl shadow-soft overflow-hidden border border-black/5 animate__animated animate__fadeInUp">
+        <!-- Example Flutter Project -->
+        <article class="group bg-white rounded-2xl shadow-soft overflow-hidden border border-black/5">
           <div class="aspect-[16/10] overflow-hidden">
             <img class="w-full h-full object-cover group-hover:scale-105 transition" src="flutter.png" alt="Flutter Project" />
           </div>
@@ -538,10 +521,6 @@
             <p class="mt-1 text-sm text-ink/70">
               A Flutter app for managing daily tasks with reminders and a clean, modern UI.
             </p>
-            <a href="#"
-              class="mt-3 inline-flex items-center gap-2 text-sm font-medium hover:underline">
-              View Details <i class="fa-solid fa-arrow-right"></i>
-            </a>
           </div>
         </article>
       </div>
